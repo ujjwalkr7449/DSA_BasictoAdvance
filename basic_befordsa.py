@@ -100,3 +100,12 @@ print("Digits:", count)
 
 s = input("Enter a string: ")
 print(s[::-1])
+
+s = input("Enter a string: ").lower()
+count = 0
+
+for ch in s:
+    if ch in "aeiou":
+        count += 1
+
+print("Vowels:", count)
