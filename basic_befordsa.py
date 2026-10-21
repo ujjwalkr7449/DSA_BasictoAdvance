@@ -119,3 +119,22 @@ for num in arr:
         largest = num
 
 print(largest)
+
+
+
+arr = [10, 25, 8, 25, 18]
+
+largest = float("-inf")
+second = float("-inf")
+
+for num in arr:
+    if num > largest:
+        second = largest
+        largest = num
+    elif largest > num > second:
+        second = num
+
+if second == float("-inf"):
+    print("No second-largest distinct element")
+else:
+    print(second)
