@@ -25,3 +25,6 @@ elif b >= a and b >= c:
     print(b)
 else:
     print(c)
+    
+for i in range(1, 11):
+    print(i)
