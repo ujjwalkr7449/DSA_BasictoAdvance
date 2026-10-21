@@ -95,3 +95,8 @@ else:
         n //= 10
 
 print("Digits:", count)
+
+
+
+s = input("Enter a string: ")
+print(s[::-1])
