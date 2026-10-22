@@ -96,3 +96,8 @@ values = (10, 20, 30, 40)
 
 print("Sum:", sum(values))
 print("Maximum:", max(values))
+
+#Count occurrences of an element in a tuple
+values = (1, 2, 2, 3, 2, 4)
+
+print(values.count(2))
