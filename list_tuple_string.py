@@ -105,3 +105,12 @@ print(values.count(2))
 values = (10, 20, 30, 40)
 
 print(values.index(30))
+
+#Convert a tuple into a list and update it
+values = (10, 20, 30)
+
+temp = list(values)
+temp[1] = 99
+values = tuple(temp)
+
+print(values)
