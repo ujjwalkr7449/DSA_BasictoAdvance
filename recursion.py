@@ -49,3 +49,12 @@ def fibonacci(n):
 
 for i in range(7):
     print(fibonacci(i), end=" ")
+    
+#How recursion actually executes
+def calculate(n):
+    if n == 0:
+        return 0
+
+    return n + calculate(n - 1)
+
+print(calculate(3))
