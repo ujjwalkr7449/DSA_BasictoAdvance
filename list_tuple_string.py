@@ -114,3 +114,13 @@ temp[1] = 99
 values = tuple(temp)
 
 print(values)
+
+
+#7. Unpack a tuple
+student = ("Ujjwal", 21, "Python")
+
+name, age, skill = student
+
+print(name)
+print(age)
+print(skill)
