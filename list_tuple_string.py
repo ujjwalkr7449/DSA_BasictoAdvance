@@ -124,3 +124,9 @@ name, age, skill = student
 print(name)
 print(age)
 print(skill)
+
+
+#Stringss
+
+text = "python"
+print(text[::-1])
