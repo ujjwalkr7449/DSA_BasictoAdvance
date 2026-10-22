@@ -101,3 +101,7 @@ print("Maximum:", max(values))
 values = (1, 2, 2, 3, 2, 4)
 
 print(values.count(2))
+
+values = (10, 20, 30, 40)
+
+print(values.index(30))
