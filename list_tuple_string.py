@@ -156,3 +156,10 @@ for ch in text.lower():
 
 print("Vowels:", vowels)
 print("Consonants:", consonants)
+
+
+#4. Count character frequency
+text = "banana"
+
+for ch in sorted(set(text)):
+    print(ch, text.count(ch))
