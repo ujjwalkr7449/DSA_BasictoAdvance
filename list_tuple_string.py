@@ -68,3 +68,13 @@ for num in numbers:
         unique.append(num)
 
 print(unique)
+
+#Find the second-largest distinct element
+numbers = [10, 5, 20, 8, 20]
+
+unique = sorted(set(numbers))
+
+if len(unique) >= 2:
+    print(unique[-2])
+else:
+    print("No second-largest element")
