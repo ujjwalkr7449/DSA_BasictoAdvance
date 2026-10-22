@@ -163,3 +163,13 @@ text = "banana"
 
 for ch in sorted(set(text)):
     print(ch, text.count(ch))
+    
+    
+#5. Check anagrams
+a = "listen"
+b = "silent"
+
+if sorted(a) == sorted(b):
+    print("Anagram")
+else:
+    print("Not anagram")
