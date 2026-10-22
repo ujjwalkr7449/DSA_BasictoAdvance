@@ -86,3 +86,7 @@ values = (10, 20, 30, 40)
 
 print(values[0])
 print(values[-1])
+
+
+values = (10, 20, 30, 40, 50)
+print(len(values))
