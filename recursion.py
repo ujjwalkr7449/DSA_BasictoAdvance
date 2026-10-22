@@ -1,4 +1,4 @@
-#Program 1: Sum of first N natural numbers
+#Sum of first N natural numbers
 
 def sum_n(n):
     if n == 0:
@@ -8,7 +8,7 @@ def sum_n(n):
 
 print(sum_n(5))
 
-#Program 2: Factorial of a number
+#Factorial of a number
 
 def factorial(n):
     if n == 0 or n == 1:
@@ -19,7 +19,7 @@ def factorial(n):
 print(factorial(5))
 
 
-#Program 3: Print numbers from 1 to N
+#Print numbers from 1 to N
 def print_numbers(n):
     if n == 0:
         return
@@ -29,7 +29,7 @@ def print_numbers(n):
 
 print_numbers(5)
 
-#Program 4: Reverse a string
+#Reverse a string
 def reverse_string(s):
     if len(s) == 0:
         return ""
@@ -37,3 +37,15 @@ def reverse_string(s):
     return reverse_string(s[1:]) + s[0]
 
 print(reverse_string("python"))
+
+
+#Fibonacci sequence
+
+def fibonacci(n):
+    if n <= 1:
+        return n
+
+    return fibonacci(n - 1) + fibonacci(n - 2)
+
+for i in range(7):
+    print(fibonacci(i), end=" ")
