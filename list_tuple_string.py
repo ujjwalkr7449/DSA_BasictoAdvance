@@ -78,3 +78,11 @@ if len(unique) >= 2:
     print(unique[-2])
 else:
     print("No second-largest element")
+    
+    
+    
+#Tuples 
+values = (10, 20, 30, 40)
+
+print(values[0])
+print(values[-1])
