@@ -173,3 +173,20 @@ if sorted(a) == sorted(b):
     print("Anagram")
 else:
     print("Not anagram")
+    
+
+    
+    
+sentence = "Python is easy to learn"
+
+words = sentence.split()
+print(len(words))
+
+
+#8. Find the first non-repeating character
+text = "aabbcde"
+
+for ch in text:
+    if text.count(ch) == 1:
+        print(ch)
+        break
