@@ -28,3 +28,12 @@ def print_numbers(n):
     print(n)
 
 print_numbers(5)
+
+#Program 4: Reverse a string
+def reverse_string(s):
+    if len(s) == 0:
+        return ""
+
+    return reverse_string(s[1:]) + s[0]
+
+print(reverse_string("python"))
