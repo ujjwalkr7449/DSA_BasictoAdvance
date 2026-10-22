@@ -90,3 +90,9 @@ print(values[-1])
 
 values = (10, 20, 30, 40, 50)
 print(len(values))
+
+
+values = (10, 20, 30, 40)
+
+print("Sum:", sum(values))
+print("Maximum:", max(values))
