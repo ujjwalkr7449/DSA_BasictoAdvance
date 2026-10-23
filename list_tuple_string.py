@@ -190,3 +190,11 @@ for ch in text:
     if text.count(ch) == 1:
         print(ch)
         break
+    
+li=[]   
+a=int(input("Enter a number: "))
+for i in range(a):
+    b=int(input("Enter a number: "))
+    li.append(b)
+
+    
