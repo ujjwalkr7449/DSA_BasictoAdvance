@@ -60,3 +60,12 @@ d = {"a": 10, "b": 20}
 d.pop("a")
 
 print(d)
+
+d = {
+    "a": 10,
+    "b": 20,
+    "c": 30
+}
+
+for key in d:
+    print(key)
