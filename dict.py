@@ -81,3 +81,15 @@ d = {"a": 10, "b": 20}
 
 print("a" in d)
 print(len(d))
+
+arr = [1, 2, 2, 3, 1, 2]
+
+freq = {}
+
+for num in arr:
+    if num in freq:
+        freq[num] += 1
+    else:
+        freq[num] = 1
+
+print(freq)
