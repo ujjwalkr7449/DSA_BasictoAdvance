@@ -43,3 +43,13 @@ print(d)
 d["apple"] = 50
 
 print(d)
+
+d = {
+    "a": 10,
+    "b": 20,
+    "c": 30
+}
+
+del d["a"]
+
+print(d)
