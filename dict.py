@@ -75,3 +75,9 @@ for value in d.values():
     
 for key, value in d.items():
     print(key, value)
+    
+
+d = {"a": 10, "b": 20}
+
+print("a" in d)
+print(len(d))
