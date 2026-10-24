@@ -69,3 +69,6 @@ d = {
 
 for key in d:
     print(key)
+    
+for value in d.values():
+    print(value)
