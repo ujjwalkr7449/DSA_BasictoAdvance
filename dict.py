@@ -93,3 +93,12 @@ for num in arr:
         freq[num] = 1
 
 print(freq)
+
+arr = [1, 2, 2, 3, 1, 2]
+
+freq = {}
+
+for num in arr:
+    freq[num] = freq.get(num, 0) + 1
+
+print(freq)
