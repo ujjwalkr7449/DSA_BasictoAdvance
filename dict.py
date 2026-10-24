@@ -40,3 +40,6 @@ d["apple"] = 10
 d["banana"] = 20
 
 print(d)
+d["apple"] = 50
+
+print(d)
