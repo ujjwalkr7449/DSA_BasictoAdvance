@@ -33,3 +33,10 @@ d = {"a": 10, "b": 20}
 
 print(d.get("a"))
 print(d.get("x", 0))
+
+d = {}
+
+d["apple"] = 10
+d["banana"] = 20
+
+print(d)
