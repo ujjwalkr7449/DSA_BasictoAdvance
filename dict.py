@@ -5,3 +5,17 @@ student = {
 }
 
 print(student)
+
+
+
+# Empty dictionary
+d = {}
+
+# Dictionary with values
+d = {
+    "a": 10,
+    "b": 20,
+    "c": 30
+}
+
+print(d)
