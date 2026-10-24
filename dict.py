@@ -114,3 +114,14 @@ for ch in s:
     freq[ch] = freq.get(ch, 0) + 1
 
 print(freq)
+
+arr = [1, 2, 3, 2, 4, 1]
+
+freq = {}
+
+for num in arr:
+    freq[num] = freq.get(num, 0) + 1
+
+for num, count in freq.items():
+    if count > 1:
+        print(num)
