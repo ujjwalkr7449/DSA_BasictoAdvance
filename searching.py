@@ -18,3 +18,19 @@ for i in range(len(arr)):
     if arr[i] == target:
         print("Found at index:", i)
         break
+    
+#Example 2: Linear Search Using a Function
+
+def linear_search(arr, target):
+    for i in range(len(arr)):
+        if arr[i] == target:
+            return i
+
+    return -1
+
+
+arr = [5, 10, 15, 20, 25]
+
+print(linear_search(arr, 15))
+print(linear_search(arr, 100))
+
