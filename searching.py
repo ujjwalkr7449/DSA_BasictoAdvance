@@ -61,3 +61,12 @@ arr = [10, 20, 30, 40, 50, 60, 70]
 print(binary_search(arr, 50))
 print(binary_search(arr, 25))
 
+#using sort()
+
+arr = [50, 10, 40, 20, 30]
+
+arr.sort()
+
+print(arr)
+ 
+
