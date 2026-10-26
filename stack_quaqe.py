@@ -140,3 +140,12 @@ from collections import deque
 queue = deque([10, 20, 30])
 
 print("Front:", queue[0])
+
+from collections import deque
+
+queue = deque()
+
+if not queue:
+    print("Queue is empty")
+else:
+    print("Queue is not empty")
