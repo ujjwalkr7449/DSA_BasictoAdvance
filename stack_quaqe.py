@@ -133,3 +133,10 @@ print("Queue:", queue)
 queue.popleft()
 
 print("After dequeue:", queue)
+
+
+from collections import deque
+
+queue = deque([10, 20, 30])
+
+print("Front:", queue[0])
