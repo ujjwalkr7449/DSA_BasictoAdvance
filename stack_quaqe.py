@@ -11,3 +11,10 @@ print("Stack:", stack)
 stack.pop()
 
 print("After pop:", stack)
+
+
+stack = [10, 20, 30]
+
+top = stack[-1]
+
+print("Top element:", top)
