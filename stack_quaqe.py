@@ -18,3 +18,10 @@ stack = [10, 20, 30]
 top = stack[-1]
 
 print("Top element:", top)
+
+stack = []
+
+if len(stack) == 0:
+    print("Stack is empty")
+else:
+    print("Stack is not empty")
