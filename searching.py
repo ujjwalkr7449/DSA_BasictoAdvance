@@ -133,3 +133,5 @@ def selection_sort(arr):
 arr = [64, 25, 12, 22, 11]
 
 print(selection_sort(arr))
+
+#7. Insertion Sort
