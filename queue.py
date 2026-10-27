@@ -46,3 +46,9 @@ if len(queue) == 0:
     print("Queue is empty")
 else:
     print("Queue is not empty")
+    
+    
+#Question 5: Find the size of a queue
+queue = [10, 20, 30, 40, 50]
+
+print(len(queue))
