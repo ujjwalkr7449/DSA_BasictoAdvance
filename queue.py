@@ -26,3 +26,10 @@ queue.append(20)
 queue.append(30)
 
 print(queue)
+
+#Question 2: Remove the first element
+queue = [10, 20, 30, 40]
+
+queue.pop(0)
+
+print(queue)
