@@ -33,3 +33,8 @@ queue = [10, 20, 30, 40]
 queue.pop(0)
 
 print(queue)
+
+#Question 3: Find the front element
+queue = [10, 20, 30, 40]
+
+print(queue[0])
