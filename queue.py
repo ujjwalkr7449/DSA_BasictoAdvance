@@ -52,3 +52,12 @@ else:
 queue = [10, 20, 30, 40, 50]
 
 print(len(queue))
+
+#Question 6: Reverse a queue
+from collections import deque
+
+queue = deque([10, 20, 30, 40])
+
+queue.reverse()
+
+print(queue)
