@@ -79,3 +79,17 @@ while queue:
     print(queue.popleft())
 
 print("Queue is empty:", not queue)
+
+#Question 9: Implement a queue using user input
+from collections import deque
+
+queue = deque()
+
+n = int(input("How many elements? "))
+
+for i in range(n):
+    value = int(input("Enter value: "))
+    queue.append(value)
+
+print("Queue:", queue)
+print("Front:", queue[0] if queue else "Queue is empty")
