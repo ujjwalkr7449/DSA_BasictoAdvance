@@ -61,3 +61,11 @@ queue = deque([10, 20, 30, 40])
 queue.reverse()
 
 print(queue)
+
+#Question 7: Print all elements of a queue
+from collections import deque
+
+queue = deque([10, 20, 30, 40])
+
+for item in queue:
+    print(item)
