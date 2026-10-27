@@ -93,3 +93,40 @@ for i in range(n):
 
 print("Queue:", queue)
 print("Front:", queue[0] if queue else "Queue is empty")
+
+#Question 10: Create a menu-driven queue
+from collections import deque
+
+queue = deque()
+
+while True:
+    print("\n1. Enqueue")
+    print("2. Dequeue")
+    print("3. Peek")
+    print("4. Display")
+    print("5. Exit")
+
+    choice = int(input("Enter choice: "))
+
+    if choice == 1:
+        value = int(input("Enter value: "))
+        queue.append(value)
+        print("Element added")
+
+    elif choice == 2:
+        if queue:
+            print("Removed:", queue.popleft())
+        else:
+            print("Queue is empty")
+
+    elif choice == 3:
+        print("Front:", queue[0] if queue else "Queue is empty")
+
+    elif choice == 4:
+        print("Queue:", list(queue))
+
+    elif choice == 5:
+        break
+
+    else:
+        print("Invalid choice")
