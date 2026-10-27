@@ -69,3 +69,13 @@ queue = deque([10, 20, 30, 40])
 
 for item in queue:
     print(item)
+    
+#Question 8: Remove all elements from a queue
+from collections import deque
+
+queue = deque([10, 20, 30])
+
+while queue:
+    print(queue.popleft())
+
+print("Queue is empty:", not queue)
