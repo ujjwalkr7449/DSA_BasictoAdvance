@@ -38,3 +38,11 @@ print(queue)
 queue = [10, 20, 30, 40]
 
 print(queue[0])
+
+#Check whether the queue is empty
+queue = []
+
+if len(queue) == 0:
+    print("Queue is empty")
+else:
+    print("Queue is not empty")
