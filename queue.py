@@ -17,3 +17,12 @@ print(queue)
 
 # Front element
 print(queue[0])
+
+#Question 1: Implement a queue using a list
+queue = []
+
+queue.append(10)
+queue.append(20)
+queue.append(30)
+
+print(queue)
