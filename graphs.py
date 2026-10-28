@@ -14,7 +14,7 @@ Every edge can have a cost, distance, or weight.
 """
 """ Graph Representation in Python:
 1. Adjacency Matrix:An adjacency list stores each node along with its neighboring nodes.
-
+Remember: graph['A'] returns the neighbors of node A.
 """
 graph = {
     'A': ['B', 'C'],
