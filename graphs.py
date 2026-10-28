@@ -66,3 +66,5 @@ def bfs(graph, start):
 
 bfs(graph, 'A')
 
+"""5. DFS — Depth-First Search:
+DFS explores as deeply as possible before backtracking. It can use recursion or a stack."""
