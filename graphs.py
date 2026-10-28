@@ -28,3 +28,12 @@ print(graph['A'])
 
 """Method 2: Adjacency Matrix:
 An adjacency matrix uses a 2D list. 1 means an edge exists, and 0 means no edge exists."""
+graph = [
+    [0, 1, 1, 0],
+    [1, 0, 0, 1],
+    [1, 0, 0, 1],
+    [0, 1, 1, 0]
+]
+
+for row in graph:
+    print(row)
