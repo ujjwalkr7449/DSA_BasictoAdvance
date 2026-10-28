@@ -68,3 +68,23 @@ bfs(graph, 'A')
 
 """5. DFS — Depth-First Search:
 DFS explores as deeply as possible before backtracking. It can use recursion or a stack."""
+graph = {
+    'A': ['B', 'C'],
+    'B': ['A', 'D'],
+    'C': ['A', 'E'],
+    'D': ['B', 'E'],
+    'E': ['C', 'D']
+}
+
+def dfs(graph, node, visited=None):
+    if visited is None:
+        visited = set()
+
+    visited.add(node)
+    print(node, end=" ")
+
+    for neighbor in graph[node]:
+        if neighbor not in visited:
+            dfs(graph, neighbor, visited)
+
+dfs(graph, 'A')
