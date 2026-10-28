@@ -3,3 +3,12 @@ A graph is a non-linear data structure made up of:
 - Vertex (Node): A point in the graph.
 - Edge: A connection between two nodes."""
 
+"""
+types of Graphs:
+1. Undirected Graph:
+Edges have no direction. If A connects to B, you can travel from A to B and B to A.
+2. Directed Graph:
+Edges have directions. If A → B, you cannot automatically travel from B → A.
+3. Weighted Graph:
+Every edge can have a cost, distance, or weight.
+"""
