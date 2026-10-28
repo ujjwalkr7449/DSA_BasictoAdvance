@@ -40,3 +40,28 @@ for row in graph:
     
 """4. BFS — Breadth-First Search: 
 BFS explores a graph level by level. It uses a queue."""
+
+from collections import deque
+
+graph = {
+    'A': ['B', 'C'],
+    'B': ['A', 'D'],
+    'C': ['A', 'E'],
+    'D': ['B', 'E'],
+    'E': ['C', 'D']
+}
+
+def bfs(graph, start):
+    visited = set([start])
+    queue = deque([start])
+
+    while queue:
+        node = queue.popleft()
+        print(node, end=" ")
+
+        for neighbor in graph[node]:
+            if neighbor not in visited:
+                visited.add(neighbor)
+                queue.append(neighbor)
+
+bfs(graph, 'A')
