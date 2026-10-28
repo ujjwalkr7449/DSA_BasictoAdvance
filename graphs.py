@@ -12,3 +12,16 @@ Edges have directions. If A → B, you cannot automatically travel from B → A.
 3. Weighted Graph:
 Every edge can have a cost, distance, or weight.
 """
+""" Graph Representation in Python:
+1. Adjacency Matrix:An adjacency list stores each node along with its neighboring nodes.
+
+"""
+graph = {
+    'A': ['B', 'C'],
+    'B': ['A', 'D'],
+    'C': ['A', 'D'],
+    'D': ['B', 'C']
+}
+
+print(graph)
+print(graph['A'])
