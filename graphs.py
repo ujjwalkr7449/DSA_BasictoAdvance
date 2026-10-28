@@ -37,3 +37,6 @@ graph = [
 
 for row in graph:
     print(row)
+    
+"""4. BFS — Breadth-First Search: 
+BFS explores a graph level by level. It uses a queue."""
