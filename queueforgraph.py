@@ -7,3 +7,16 @@ The element inserted first is removed first, just like people standing in a line
 
 """2. Queue operations in Python
 Use deque from Python's collections module."""
+
+from collections import deque
+
+q = deque()
+
+q.append(10)  # Add element
+q.append(20)
+q.append(30)
+
+print(q)
+
+print(q.popleft())  # Remove first element
+print(q)
