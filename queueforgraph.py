@@ -63,3 +63,16 @@ q.popleft()
 q.append(20)
 
 print(list(q))
+
+
+"""Queue in Python: Functions, Methods & Keywords (DSA)
+In Python DSA, a Queue follows FIFO (First In, First Out). 
+For interviews, you should understand the methods, 
+built-in functions, and keywords used when implementing a queue."""
+
+"""1. Queue methods using deque
+First, import deque from the collections module."""
+
+from collections import deque
+
+q = deque()
