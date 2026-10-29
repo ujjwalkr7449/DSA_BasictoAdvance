@@ -149,4 +149,19 @@ def bfs(start):
                 visited.add(neighbor)
                 q.append(neighbor)
 
+
 bfs('A')
+
+
+
+
+
+"""Quick revision for interviews
+- Queue creation: deque()
+- Insert: append()
+- Delete from front: popleft()
+- Check queue: while q:
+- Queue size: len(q)
+- Check membership: x in q
+- Track visited nodes: set()
+- BFS traversal: while + popleft() + append()"""
