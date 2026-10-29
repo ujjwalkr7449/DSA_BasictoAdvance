@@ -98,3 +98,29 @@ print(list(q))   # [10, 20, 30]
 print(bool(q))   # True
 print(max(q))    # 30
 print(sum(q))    # 60
+
+
+#Complete Queue example
+from collections import deque
+
+def queue_example():
+    q = deque()
+
+    q.append(10)
+    q.append(20)
+    q.append(30)
+
+    print("Queue:", list(q))
+    print("Front element:", q[0])
+    print("Queue size:", len(q))
+
+    removed = q.popleft()
+    print("Removed:", removed)
+    print("Updated queue:", list(q))
+
+    if q:
+        print("Queue is not empty")
+    else:
+        print("Queue is empty")
+
+queue_example()
