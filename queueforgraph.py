@@ -20,3 +20,6 @@ print(q)
 
 print(q.popleft())  # Remove first element
 print(q)
+"""Remember these two operations:
+- append() → adds an element to the rear.
+- popleft() → removes an element from the front."""
