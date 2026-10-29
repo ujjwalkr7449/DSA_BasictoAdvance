@@ -76,3 +76,15 @@ First, import deque from the collections module."""
 from collections import deque
 
 q = deque()
+
+
+"""2. Built-in functions used with a Queue
+Function	Purpose	Example
+len(q)	Count elements	len(q)
+list(q)	Convert queue to list	list(q)
+bool(q)	Check whether queue is non-empty	bool(q)
+print(q)	Display queue	print(q)
+max(q)	Find maximum element	max(q)
+min(q)	Find minimum element	min(q)
+sum(q)	Sum numeric elements	sum(q)
+"""
