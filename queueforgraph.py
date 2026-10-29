@@ -23,3 +23,28 @@ print(q)
 """Remember these two operations:
 - append() → adds an element to the rear.
 - popleft() → removes an element from the front."""
+
+from collections import deque
+
+graph = {
+    'A': ['B', 'C'],
+    'B': ['A', 'D'],
+    'C': ['A', 'E'],
+    'D': ['B'],
+    'E': ['C']
+}
+
+def bfs(start):
+    visited = set([start])
+    q = deque([start])
+
+    while q:
+        node = q.popleft()
+        print(node, end=" ")
+
+        for neighbor in graph[node]:
+            if neighbor not in visited:
+                visited.add(neighbor)
+                q.append(neighbor)
+
+bfs('A')
