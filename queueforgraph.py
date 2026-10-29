@@ -48,3 +48,18 @@ def bfs(start):
                 q.append(neighbor)
 
 bfs('A')
+
+
+
+from collections import deque
+
+q = deque()
+
+q.append(5)
+q.append(10)
+q.append(15)
+
+q.popleft()
+q.append(20)
+
+print(list(q))
