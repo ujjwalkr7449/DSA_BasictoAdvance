@@ -88,3 +88,13 @@ max(q)	Find maximum element	max(q)
 min(q)	Find minimum element	min(q)
 sum(q)	Sum numeric elements	sum(q)
 """
+
+from collections import deque
+
+q = deque([10, 20, 30])
+
+print(len(q))    # 3
+print(list(q))   # [10, 20, 30]
+print(bool(q))   # True
+print(max(q))    # 30
+print(sum(q))    # 60
