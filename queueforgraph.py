@@ -124,3 +124,29 @@ def queue_example():
         print("Queue is empty")
 
 queue_example()
+
+#5. Queue methods used in BFS
+from collections import deque
+
+graph = {
+    'A': ['B', 'C'],
+    'B': ['D'],
+    'C': ['E'],
+    'D': [],
+    'E': []
+}
+
+def bfs(start):
+    q = deque([start])
+    visited = {start}
+
+    while q:
+        node = q.popleft()
+        print(node, end=" ")
+
+        for neighbor in graph[node]:
+            if neighbor not in visited:
+                visited.add(neighbor)
+                q.append(neighbor)
+
+bfs('A')
