@@ -36,3 +36,6 @@ n = 6
 dp = [-1] * (n + 1)
 
 print(fib(n, dp))
+
+"""B. Tabulation (Bottom-Up DP)
+Tabulation uses iteration instead of recursion."""
