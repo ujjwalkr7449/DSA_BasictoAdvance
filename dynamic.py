@@ -87,3 +87,16 @@ print(climbStairs(4))
 
 """Problem 3: House Robber
 You cannot rob two adjacent houses. Find the maximum money you can rob."""
+def rob(nums):
+    prev2 = 0
+    prev1 = 0
+
+    for money in nums:
+        curr = max(prev1, prev2 + money)
+
+        prev2 = prev1
+        prev1 = curr
+
+    return prev1
+
+print(rob([2, 7, 9, 3, 1]))
