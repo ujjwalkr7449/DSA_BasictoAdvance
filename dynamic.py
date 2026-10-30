@@ -14,3 +14,8 @@ def fib(n):
     return fib(n-1) + fib(n-2)
 
 print(fib(5))
+
+
+"""3. Two approaches to Dynamic Programming
+A. Memoization (Top-Down DP)
+Memoization uses recursion and a dictionary or array to store previously calculated results."""
