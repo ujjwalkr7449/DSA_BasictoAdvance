@@ -39,3 +39,16 @@ print(fib(n, dp))
 
 """B. Tabulation (Bottom-Up DP)
 Tabulation uses iteration instead of recursion."""
+def fib(n):
+    dp = [0] * (n + 1)
+
+    dp[0] = 0
+    dp[1] = 1
+
+    for i in range(2, n + 1):
+        dp[i] = dp[i-1] + dp[i-2]
+
+    return dp[n]
+
+
+print(fib(6))
