@@ -84,3 +84,6 @@ def climbStairs(n):
     return dp[n]
 
 print(climbStairs(4))
+
+"""Problem 3: House Robber
+You cannot rob two adjacent houses. Find the maximum money you can rob."""
