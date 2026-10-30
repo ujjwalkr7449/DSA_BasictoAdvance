@@ -118,3 +118,15 @@ def minCostClimbingStairs(cost):
     return prev1
 
 print(minCostClimbingStairs([10, 15, 20]))
+"""Problem 5: Maximum Subarray (Kadane's Algorithm)"""
+def maxSubArray(nums):
+    curr = nums[0]
+    best = nums[0]
+
+    for i in range(1, len(nums)):
+        curr = max(nums[i], curr + nums[i])
+        best = max(best, curr)
+
+    return best
+
+print(maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4]))
