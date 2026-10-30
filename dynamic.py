@@ -52,3 +52,6 @@ def fib(n):
 
 
 print(fib(6))
+
+"""Problem 1: Fibonacci Number
+Given a number n, find the nth Fibonacci number using Dynamic Programming."""
