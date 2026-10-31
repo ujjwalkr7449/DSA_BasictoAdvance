@@ -28,3 +28,9 @@ root.left.left = Node(40)
 root.left.right = Node(50)
 
 root.right.left = Node(60)
+
+#Step 3: Print tree values
+print(root.data)
+print(root.left.data)
+print(root.right.data)
+print(root.left.left.data)
