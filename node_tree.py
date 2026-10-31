@@ -17,3 +17,14 @@ class Node:
         self.data = data
         self.left = None
         self.right = None
+        
+#Step 2: Create tree
+root = Node(10)
+
+root.left = Node(20)
+root.right = Node(30)
+
+root.left.left = Node(40)
+root.left.right = Node(50)
+
+root.right.left = Node(60)
