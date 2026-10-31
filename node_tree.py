@@ -111,3 +111,21 @@ values = [50, 30, 70, 20, 40, 60, 80]
 
 for value in values:
     root = insert(root, value)
+
+#Search operation in BST
+def search(root, key):
+
+    if root is None:
+        return False
+
+    if root.data == key:
+        return True
+
+    if key < root.data:
+        return search(root.left, key)
+
+    return search(root.right, key)
+
+
+print(search(root, 60))
+print(search(root, 100))
