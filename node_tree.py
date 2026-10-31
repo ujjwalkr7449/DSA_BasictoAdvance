@@ -10,3 +10,10 @@ n1.next = n2
 
 print(n1.data)       # 10
 print(n1.next.data)  # 20
+
+
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.left = None
+        self.right = None
