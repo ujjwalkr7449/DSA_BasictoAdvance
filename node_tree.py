@@ -53,3 +53,13 @@ def inorder(root):
     inorder(root.left)
     print(root.data, end=" ")
     inorder(root.right)
+    
+#C. Postorder Traversal
+#Order: Left → Right → Root
+def postorder(root):
+    if root is None:
+        return
+
+    postorder(root.left)
+    postorder(root.right)
+    print(root.data, end=" ")
