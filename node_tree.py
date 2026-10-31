@@ -43,3 +43,13 @@ def preorder(root):
     print(root.data, end=" ")
     preorder(root.left)
     preorder(root.right)
+    
+#B. Inorder Traversal
+#Order: Left → Root → Right
+def inorder(root):
+    if root is None:
+        return
+
+    inorder(root.left)
+    print(root.data, end=" ")
+    inorder(root.right)
