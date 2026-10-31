@@ -34,3 +34,12 @@ print(root.data)
 print(root.left.data)
 print(root.right.data)
 print(root.left.left.data)
+#Tree Traversal
+
+def preorder(root):
+    if root is None:
+        return
+
+    print(root.data, end=" ")
+    preorder(root.left)
+    preorder(root.right)
