@@ -108,4 +108,15 @@ def delete_end(self):
         temp = temp.next
 
     temp.next = None
+#F. Search an Element
+def search(self, key):
+    temp = self.head
+
+    while temp:
+        if temp.data == key:
+            return True
+
+        temp = temp.next
+
+    return False
     
