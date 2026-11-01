@@ -42,3 +42,11 @@ ll.head.next = Node(20)
 ll.head.next.next = Node(30)
 
 ll.display()
+
+"""Important Linked List Operations"""
+#A. Insertion at Beginning
+def insert_beginning(self, data):
+    new_node = Node(data)
+
+    new_node.next = self.head
+    self.head = new_node
