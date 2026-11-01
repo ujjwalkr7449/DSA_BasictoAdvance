@@ -89,3 +89,7 @@ def insert_position(self, data, position):
 
     new_node.next = temp.next
     temp.next = new_node
+#D. Delete from Beginning
+def delete_beginning(self):
+    if self.head is not None:
+        self.head = self.head.next
