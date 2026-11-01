@@ -65,3 +65,27 @@ def insert_end(self, data):
         temp = temp.next
 
     temp.next = new_node
+#C. Insertion at a Specific Position (0-based)
+def insert_position(self, data, position):
+    new_node = Node(data)
+
+    if position < 0:
+        return
+
+    if position == 0:
+        new_node.next = self.head
+        self.head = new_node
+        return
+
+    temp = self.head
+
+    for i in range(position - 1):
+        if temp is None:
+            return
+        temp = temp.next
+
+    if temp is None:
+        return
+
+    new_node.next = temp.next
+    temp.next = new_node
