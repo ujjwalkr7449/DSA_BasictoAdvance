@@ -93,3 +93,19 @@ def insert_position(self, data, position):
 def delete_beginning(self):
     if self.head is not None:
         self.head = self.head.next
+#E. Delete from End
+def delete_end(self):
+    if self.head is None:
+        return
+
+    if self.head.next is None:
+        self.head = None
+        return
+
+    temp = self.head
+
+    while temp.next.next:
+        temp = temp.next
+
+    temp.next = None
+    
