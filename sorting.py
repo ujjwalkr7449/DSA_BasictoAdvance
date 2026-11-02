@@ -123,3 +123,6 @@ def merge(left, right):
 arr = [5, 2, 8, 1, 3]
 
 print(merge_sort(arr))
+
+"""6. Quick Sort
+Quick Sort selects a pivot element and divides the array into smaller and larger elements."""
