@@ -171,3 +171,15 @@ result = []
 
 for i in range(len(count)):
     result.extend([i] * count[i])
+    
+"""9. Python Built-in Sorting
+Python provides two useful methods."""
+
+arr = [5, 2, 8, 1, 3]
+
+arr.sort()
+
+print(arr)
+arr.sort(reverse=True)
+
+print(arr)
