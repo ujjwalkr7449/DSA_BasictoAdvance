@@ -26,3 +26,14 @@ Non-comparison-based sorting
 
 """2. Bubble Sort
 Bubble Sort repeatedly compares two adjacent elements and swaps them if they are in the wrong order."""
+arr = [5, 3, 8, 4, 2]
+
+n = len(arr)
+
+for i in range(n):
+    for j in range(0, n-i-1):
+
+        if arr[j] > arr[j+1]:
+            arr[j], arr[j+1] = arr[j+1], arr[j]
+
+print(arr)
