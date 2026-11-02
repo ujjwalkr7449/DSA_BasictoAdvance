@@ -158,3 +158,16 @@ while arr:
     result.append(heapq.heappop(arr))
 
 print(result)
+
+"""8. Counting Sort
+Counting Sort counts how many times each number appears and uses those counts to arrange the elements."""arr = [4, 2, 2, 8, 3, 3, 1]
+
+count = [0] * (max(arr) + 1)
+
+for num in arr:
+    count[num] += 1
+
+result = []
+
+for i in range(len(count)):
+    result.extend([i] * count[i])
