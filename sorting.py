@@ -23,3 +23,6 @@ Non-comparison-based sorting
 - Counting Sort
 - Radix Sort
 - Bucket Sort"""
+
+"""2. Bubble Sort
+Bubble Sort repeatedly compares two adjacent elements and swaps them if they are in the wrong order."""
