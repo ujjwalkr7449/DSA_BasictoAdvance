@@ -57,3 +57,7 @@ for i in range(n):
     arr[i], arr[min_index] = arr[min_index], arr[i]
 
 print(arr)
+
+
+"""4. Insertion Sort
+Insertion Sort takes one element at a time and inserts it into its correct position in the sorted portion."""
