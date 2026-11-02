@@ -37,3 +37,6 @@ for i in range(n):
             arr[j], arr[j+1] = arr[j+1], arr[j]
 
 print(arr)
+
+"""3. Selection Sort
+Selection Sort finds the smallest element and puts it in the correct position."""
