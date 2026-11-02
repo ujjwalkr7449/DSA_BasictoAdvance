@@ -142,3 +142,19 @@ def quick_sort(arr):
 arr = [8, 3, 1, 7, 4, 2]
 
 print(quick_sort(arr))
+
+
+"""7. Heap Sort
+Heap Sort uses a Binary Heap data structure to sort elements."""
+import heapq
+
+arr = [5, 3, 8, 1, 2, 9]
+
+heapq.heapify(arr)
+
+result = []
+
+while arr:
+    result.append(heapq.heappop(arr))
+
+print(result)
