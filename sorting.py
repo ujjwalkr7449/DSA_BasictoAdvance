@@ -76,3 +76,11 @@ for i in range(1, len(arr)):
     arr[j+1] = key
 
 print(arr)
+
+"""5. Merge Sort
+Merge Sort uses the Divide and Conquer technique.
+
+Steps:
+1. Divide the array into two halves.
+2. Sort both halves.
+3. Merge both sorted halves."""
