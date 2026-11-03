@@ -135,3 +135,50 @@ root.left.left = AVLNode(10)
 # Perform right rotation to balance
 root = right_rotate(root)
 print("New root after right rotation:", root.val)  # Output: 20
+
+
+"""4. Trie (Prefix Tree): Implementation
+Question: Implement a Trie class with insert, search, and starts_with methods."""
+class TrieNode:
+
+  def __init__(self):
+    self.children = {}
+    self.is_end_of_word = False
+
+
+class Trie:
+
+  def __init__(self):
+    self.root = TrieNode()
+
+  def insert(self, word):
+    curr = self.root
+    for char in word:
+      if char not in curr.children:
+        curr.children[char] = TrieNode()
+      curr = curr.children[char]
+    curr.is_end_of_word = True
+
+  def search(self, word):
+    curr = self.root
+    for char in word:
+      if char not in curr.children:
+        return False
+      curr = curr.children[char]
+    return curr.is_end_of_word
+
+  def starts_with(self, prefix):
+    curr = self.root
+    for char in prefix:
+      if char not in curr.children:
+        return False
+      curr = curr.children[char]
+    return True
+
+
+# Example usage:
+trie = Trie()
+trie.insert("apple")
+print(trie.search("apple"))  # Output: True
+print(trie.search("app"))  # Output: False
+print(trie.starts_with("app"))  # Output: True
