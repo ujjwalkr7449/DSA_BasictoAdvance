@@ -32,3 +32,64 @@ for val in [5, 3, 7, 2, 4]:
   root = insert_into_bst(root, val)
 
 print("Is valid BST:", is_valid_bst(root))  # Output: True
+
+"""2. Heaps / Priority Queues: Min-Heap Implementation
+Question: Implement a Min-Heap from scratch supporting insertion (insert) and extracting the minimum element (extract_min).
+"""
+class MinHeap:
+
+  def __init__(self):
+    self.heap = []
+
+  def _parent(self, i):
+    return (i - 1) // 2
+
+  def _left_child(self, i):
+    return 2 * i + 1
+
+  def _right_child(self, i):
+    return 2 * i + 2
+
+  def insert(self, val):
+    self.heap.append(val)
+    self._heapify_up(len(self.heap) - 1)
+
+  def _heapify_up(self, i):
+    p = self._parent(i)
+    if i > 0 and self.heap[i] < self.heap[p]:
+      self.heap[i], self.heap[p] = self.heap[p], self.heap[i]
+      self._heapify_up(p)
+
+  def extract_min(self):
+    if not self.heap:
+      return None
+    if len(self.heap) == 1:
+      return self.heap.pop()
+
+    min_val = self.heap[0]
+    self.heap[0] = self.heap.pop()
+    self._heapify_down(0)
+    return min_val
+
+  def _heapify_down(self, i):
+    smallest = i
+    left = self._left_child(i)
+    right = self._right_child(i)
+
+    if left < len(self.heap) and self.heap[left] < self.heap[smallest]:
+      smallest = left
+    if right < len(self.heap) and self.heap[right] < self.heap[smallest]:
+      smallest = right
+
+    if smallest != i:
+      self.heap[i], self.heap[smallest] = self.heap[smallest], self.heap[i]
+      self._heapify_down(smallest)
+
+
+# Example usage:
+h = MinHeap()
+for num in [10, 3, 5, 2, 8]:
+  h.insert(num)
+
+print(h.extract_min())  # Output: 2
+print(h.extract_min())  # Output: 3
