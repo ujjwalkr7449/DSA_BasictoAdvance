@@ -93,3 +93,45 @@ for num in [10, 3, 5, 2, 8]:
 
 print(h.extract_min())  # Output: 2
 print(h.extract_min())  # Output: 3
+
+"""3. Self-Balancing Trees: AVL Tree Right Rotation
+Question: Implement a Right Rotation function used to rebalance an AVL Tree when a left-heavy imbalance occurs."""
+class AVLNode:
+
+  def __init__(self, val):
+    self.val = val
+    self.left = None
+    self.right = None
+    self.height = 1
+
+
+def get_height(node):
+  if not node:
+    return 0
+  return node.height
+
+
+def right_rotate(y):
+  x = y.left
+  t2 = x.right
+
+  # Perform rotation
+  x.right = y
+  y.left = t2
+
+  # Update heights
+  y.height = 1 + max(get_height(y.left), get_height(y.right))
+  x.height = 1 + max(get_height(x.left), get_height(x.right))
+
+  # Return new root
+  return x
+
+
+# Example setup:
+root = AVLNode(30)
+root.left = AVLNode(20)
+root.left.left = AVLNode(10)
+
+# Perform right rotation to balance
+root = right_rotate(root)
+print("New root after right rotation:", root.val)  # Output: 20
