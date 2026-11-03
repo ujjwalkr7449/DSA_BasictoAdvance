@@ -182,3 +182,39 @@ trie.insert("apple")
 print(trie.search("apple"))  # Output: True
 print(trie.search("app"))  # Output: False
 print(trie.starts_with("app"))  # Output: True
+
+"""5. Fenwick Tree (Binary Indexed Tree): Point Update & Range Sum
+Question: Implement a Fenwick Tree for efficient point updates and prefix/range sum queries."""
+class FenwickTree:
+
+  def __init__(self, n):
+    self.tree = [0] * (n + 1)
+
+  def update(self, i, delta):
+    """Adds delta to element at index i (1-based index)."""
+    while i < len(self.tree):
+      self.tree[i] += delta
+      i += i & (-i)
+
+  def query(self, i):
+    """Returns prefix sum from index 1 to i."""
+    s = 0
+    while i > 0:
+      s += self.tree[i]
+      i -= i & (-i)
+    return s
+
+  def range_query(self, l, r):
+    """Returns sum of elements in range [l, r]."""
+    return self.query(r) - self.query(l - 1)
+
+
+# Example usage:
+nums = [0, 1, 2, 3, 4, 5]  # 1-indexed values
+ft = FenwickTree(len(nums) - 1)
+
+for idx, val in enumerate(nums[1:], start=1):
+  ft.update(idx, val)
+
+print("Sum of first 3 elements:", ft.query(3))  # Output: 6 (1+2+3)
+print("Range sum from index 2 to 4:", ft.range_query(2, 4))  # Output: 9 (2+3+4)
