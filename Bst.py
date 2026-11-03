@@ -8,5 +8,14 @@ class Node:
     self.val = key
     self.left = None
     self.right = None
+    
+def insert_into_bst(root, key):
+  if not root:
+    return Node(key)
+  if key < root.val:
+    root.left = insert_into_bst(root.left, key)
+  elif key > root.val:
+    root.right = insert_into_bst(root.right, key)
+  return root
 
 
