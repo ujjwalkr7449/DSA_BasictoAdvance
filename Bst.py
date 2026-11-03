@@ -26,4 +26,9 @@ def is_valid_bst(root, min_val=float("-inf"), max_val=float("inf")):
   return is_valid_bst(root.left, min_val, root.val) and is_valid_bst(
       root.right, root.val, max_val
   )
+# Example usage:
+root = None
+for val in [5, 3, 7, 2, 4]:
+  root = insert_into_bst(root, val)
 
+print("Is valid BST:", is_valid_bst(root))  # Output: True
