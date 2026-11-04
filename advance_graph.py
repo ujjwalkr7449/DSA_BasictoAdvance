@@ -119,3 +119,30 @@ def prim(n, graph):
       if not visited[v]:
         heapq.heappush(min_heap, (weight, v, u))
   return mst, mst_weight
+
+"""4. Advanced Graph Traversals & Properties
+A. Topological Sorting (Kahn's Algorithm using In-Degrees)"""
+from collections import deque
+
+
+def kahn_topological_sort(n, graph):
+  # graph format: {u: [v, ...]}
+  in_degree = [0] * n
+  for u in graph:
+    for v in graph[u]:
+      in_degree[v] += 1
+
+  queue = deque([i for i in range(n) if in_degree[i] == 0])
+  topo_order = []
+
+  while queue:
+    u = queue.popleft()
+    topo_order.append(u)
+    for v in graph.get(u, []):
+      in_degree[v] -= 1
+      if in_degree[v] == 0:
+        queue.append(v)
+
+  if len(topo_order) != n:
+    raise ValueError("Graph has a cycle; topological sort not possible.")
+  return topo_order
