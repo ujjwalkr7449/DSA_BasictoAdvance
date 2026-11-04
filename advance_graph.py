@@ -97,3 +97,5 @@ def kruskal(n, edges):
       mst.append((u, v, w))
       mst_weight += w
   return mst, mst_weight
+
+"""B. Prim's Algorithm (Vertex-based using Priority Queue)"""
