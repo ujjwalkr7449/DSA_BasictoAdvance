@@ -81,3 +81,7 @@ def floyd_warshall(n, edges):
         if dist[i][k] + dist[k][j] < dist[i][j]:
           dist[i][j] = dist[i][k] + dist[k][j]
   return dist
+
+"""3. Minimum Spanning Tree (MST)
+A. Kruskal's Algorithm (Edge-based using DSU)
+Python"""
