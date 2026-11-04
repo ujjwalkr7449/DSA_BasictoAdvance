@@ -26,3 +26,25 @@ class DSU:
         self.rank[root_i] += 1
       return True
     return False
+
+"""2. Shortest Path Algorithms
+A. Dijkstra's Algorithm (Single-Source Shortest Path with non-negative weights)"""
+import heapq
+
+
+def dijkstra(graph, start):
+  # graph format: {u: [(v, weight), ...]}
+  distances = {node: float("inf") for node in graph}
+  distances[start] = 0
+  pq = [(0, start)]
+
+  while pq:
+    current_dist, u = heapq.heappop(pq)
+    if current_dist > distances[u]:
+      continue
+    for v, weight in graph[u]:
+      distance = current_dist + weight
+      if distance < distances[v]:
+        distances[v] = distance
+        heapq.heappush(pq, (distance, v))
+  return distances
