@@ -99,3 +99,23 @@ def kruskal(n, edges):
   return mst, mst_weight
 
 """B. Prim's Algorithm (Vertex-based using Priority Queue)"""
+def prim(n, graph):
+  # graph format: {u: [(v, weight), ...]}
+  visited = [False] * n
+  min_heap = [(0, 0, -1)]  # (weight, current_node, parent)
+  mst_weight = 0
+  mst = []
+
+  while min_heap:
+    w, u, p = heapq.heappop(min_heap)
+    if visited[u]:
+      continue
+    visited[u] = True
+    if p != -1:
+      mst.append((p, u, w))
+      mst_weight += w
+
+    for v, weight in graph[u]:
+      if not visited[v]:
+        heapq.heappush(min_heap, (weight, v, u))
+  return mst, mst_weight
