@@ -85,3 +85,15 @@ def floyd_warshall(n, edges):
 """3. Minimum Spanning Tree (MST)
 A. Kruskal's Algorithm (Edge-based using DSU)
 Python"""
+def kruskal(n, edges):
+  # edges format: [(weight, u, v), ...]
+  edges.sort()
+  dsu = DSU(n)
+  mst = []
+  mst_weight = 0
+
+  for w, u, v in edges:
+    if dsu.union(u, v):
+      mst.append((u, v, w))
+      mst_weight += w
+  return mst, mst_weight
