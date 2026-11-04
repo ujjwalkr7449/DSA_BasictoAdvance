@@ -48,3 +48,20 @@ def dijkstra(graph, start):
         distances[v] = distance
         heapq.heappush(pq, (distance, v))
   return distances
+
+"""B. Bellman-Ford Algorithm (Handles negative weights, detects cycles)"""
+def bellman_ford(vertices, edges, start):
+  # edges format: [(u, v, weight), ...]
+  dist = {v: float("inf") for v in vertices}
+  dist[start] = 0
+
+  for _ in range(len(vertices) - 1):
+    for u, v, w in edges:
+      if dist[u] != float("inf") and dist[u] + w < dist[v]:
+        dist[v] = dist[u] + w
+
+  # Check for negative weight cycles
+  for u, v, w in edges:
+    if dist[u] != float("inf") and dist[u] + w < dist[v]:
+      raise ValueError("Graph contains a negative weight cycle")
+  return dist
