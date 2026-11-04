@@ -146,3 +146,43 @@ def kahn_topological_sort(n, graph):
   if len(topo_order) != n:
     raise ValueError("Graph has a cycle; topological sort not possible.")
   return topo_order
+"""B. Strongly Connected Components (Kosaraju's Algorithm)"""
+def kosaraju_scc(n, graph):
+  # graph format: {u: [v, ...]}
+  visited = [False] * n
+  stack = []
+
+  def dfs1(u):
+    visited[u] = True
+    for v in graph.get(u, []):
+      if not visited[v]:
+        dfs1(v)
+    stack.append(u)
+
+  for i in range(n):
+    if not visited[i]:
+      dfs1(i)
+
+  # Transpose graph
+  rev_graph = {i: [] for i in range(n)}
+  for u in graph:
+    for v in graph[u]:
+      rev_graph[v].append(u)
+
+  visited = [False] * n
+  sccs = []
+
+  def dfs2(u, component):
+    visited[u] = True
+    component.append(u)
+    for v in rev_graph.get(u, []):
+      if not visited[v]:
+        dfs2(v, component)
+
+  while stack:
+    u = stack.pop()
+    if not visited[u]:
+      component = []
+      dfs2(u, component)
+      sccs.append(component)
+  return sccs
