@@ -69,3 +69,17 @@ Check if a string is a valid palindrome
 and right at the end index (len(s) - 1).Compare characters at both pointers. If they don't match, 
 it's not a palindrome.Move left forward and right backward towards the center until they meet, 
 reducing time complexity to $O(n)$ and space to $O(1)$."""
+def is_palindrome(s):
+  left, right = 0, len(s) - 1
+
+  while left < right:
+    if s[left] != s[right]:
+      return False
+    left += 1
+    right -= 1
+  return True
+
+
+# Example usage:
+print("Is 'racecar' a palindrome?", is_palindrome("racecar"))  # Output: True
+print("Is 'hello' a palindrome?", is_palindrome("hello"))  # Output: False
