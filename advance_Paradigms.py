@@ -11,3 +11,13 @@ Base Case: Define the stopping condition (if n == 0 or n == 1, return 1) to prev
 Recursive Step: Break the problem down into a smaller subproblem: n * factorial(n - 1).
 
 Call Stack: The program pushes function calls onto the call stack until it hits the base case, then resolves values as it unwinds."""
+def factorial(n):
+  # Base case
+  if n == 0 or n == 1:
+    return 1
+  # Recursive step
+  return n * factorial(n - 1)
+
+
+# Example usage:
+print("Factorial of 5:", factorial(5))  # Output: 120
