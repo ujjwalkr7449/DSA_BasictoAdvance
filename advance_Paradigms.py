@@ -52,3 +52,13 @@ Pass a custom key using a lambda function to tell Python to
 sort based on a specific element inside the tuples 
 (e.g., index 1 for the end time), which is a core technique in Greedy algorithms."""
 
+def sort_intervals(intervals):
+  # intervals = [[start, end], ...]
+  # Sort by the end time (index 1)
+  return sorted(intervals, key=lambda x: x[1])
+
+
+# Example usage:
+intervals = [[1, 3], [2, 4], [0, 6], [5, 7]]
+print("Sorted intervals by end time:", sort_intervals(intervals))
+# Output: [[1, 3], [2, 4], [0, 6], [5, 7]]
