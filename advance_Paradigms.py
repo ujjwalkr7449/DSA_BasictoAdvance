@@ -40,3 +40,15 @@ def is_even(n):
 # Example usage:
 print("Is 4 even?", is_even(4))  # Output: True
 print("Is 7 even?", is_even(7))  # Output: False
+
+"""3. Sorting & Custom Comparators
+Problem: Sort a list of intervals based on their ending times.
+
+Approach:
+
+Use Python's built-in Timsort algorithm (sorted()).
+
+Pass a custom key using a lambda function to tell Python to 
+sort based on a specific element inside the tuples 
+(e.g., index 1 for the end time), which is a core technique in Greedy algorithms."""
+
