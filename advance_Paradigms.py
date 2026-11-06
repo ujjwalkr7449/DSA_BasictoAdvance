@@ -20,4 +20,23 @@ def factorial(n):
 
 
 # Example usage:
-print("Factorial of 5:", factorial(5))  # Output: 120
+print("Factorial of 5:", factorial(5))  
+
+"""2. Bit Manipulation
+Problem: Check whether a number is even or odd using bitwise operators.
+
+Approach:
+
+Look at the least significant bit (LSB) of a binary number.
+
+For any even number, the LSB is always 0. For any odd number, the LSB is always 1.
+
+Use the bitwise AND operator (n & 1) to mask out all other bits and check if the result is 0 or 1."""
+def is_even(n):
+  # If n & 1 is 0, the last bit is 0 (even)
+  return (n & 1) == 0
+
+
+# Example usage:
+print("Is 4 even?", is_even(4))  # Output: True
+print("Is 7 even?", is_even(7))  # Output: False
