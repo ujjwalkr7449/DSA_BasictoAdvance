@@ -62,3 +62,10 @@ def sort_intervals(intervals):
 intervals = [[1, 3], [2, 4], [0, 6], [5, 7]]
 print("Sorted intervals by end time:", sort_intervals(intervals))
 # Output: [[1, 3], [2, 4], [0, 6], [5, 7]]
+
+"""4. Two Pointers PatternProblem: 
+Check if a string is a valid palindrome
+(reads the same forward and backward).Approach:Initialize two pointers: left at the start index (0)
+and right at the end index (len(s) - 1).Compare characters at both pointers. If they don't match, 
+it's not a palindrome.Move left forward and right backward towards the center until they meet, 
+reducing time complexity to $O(n)$ and space to $O(1)$."""
