@@ -89,3 +89,26 @@ subarray of size k.Approach:Calculate the sum of the first window of size k.Slid
 one element to the right: add the new element coming into the window on the right, 
 and subtract the old element dropping off on the left.Keep track of the maximum sum seen so far,
 avoiding the $O(n times k)$ cost of recomputing sums from scratch."""
+def max_subarray_sum(arr, k):
+  n = len(arr)
+  if n < k:
+    return None
+
+  # Compute sum of first window
+  window_sum = sum(arr[:k])
+  max_sum = window_sum
+
+  # Slide the window
+  for i in range(n - k):
+    window_sum = window_sum - arr[i] + arr[i + k]
+    max_sum = max(max_sum, window_sum)
+
+  return max_sum
+
+
+# Example usage:
+nums = [2, 1, 5, 1, 3, 2]
+k = 3
+print(
+    f"Max sum of subarray of size {k}:", max_subarray_sum(nums, k)
+)  # Output: 9 (5 + 1 + 3)
