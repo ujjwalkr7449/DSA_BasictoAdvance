@@ -83,3 +83,9 @@ def is_palindrome(s):
 # Example usage:
 print("Is 'racecar' a palindrome?", is_palindrome("racecar"))  # Output: True
 print("Is 'hello' a palindrome?", is_palindrome("hello"))  # Output: False
+
+"""5. Sliding Window Pattern (Fixed Size)Problem: Find the maximum sum of any contiguous 
+subarray of size k.Approach:Calculate the sum of the first window of size k.Slide the window 
+one element to the right: add the new element coming into the window on the right, 
+and subtract the old element dropping off on the left.Keep track of the maximum sum seen so far,
+avoiding the $O(n times k)$ cost of recomputing sums from scratch."""
