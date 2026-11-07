@@ -140,7 +140,7 @@ n = len(cost_matrix)
 memo = {}
 print("Minimum TSP Cost:", tsp(1, 0, n, cost_matrix, memo))
 
-"""2. . Greedy Algorithms (Activity Selection)
+"""2.Greedy Algorithms (Activity Selection)
 Question: Given start and end times of activities, select the maximum number of activities 
 that can be performed by a single person."""
 def activity_selection(start, end):
@@ -163,3 +163,40 @@ def activity_selection(start, end):
 start_times = [1, 3, 0, 5, 8, 5]
 end_times = [2, 4, 6, 7, 9, 9]
 print("Selected Activity Indices:", activity_selection(start_times, end_times))
+
+"""3. Backtracking (N-Queens Problem)Question: Place $N$ queens on an $N 
+times N$ chessboard such that no two queens threaten each other."""
+def solve_n_queens(n):
+  col = set()
+  pos_diag = set()  # (r + c)
+  neg_diag = set()  # (r - c)
+  res = []
+  board = [["."] * n for _ in range(n)]
+
+  def backtrack(r):
+    if r == n:
+      res.append(["".join(row) for row in board])
+      return
+
+    for c in range(n):
+      if c in col or (r + c) in pos_diag or (r - c) in neg_diag:
+        continue
+
+      col.add(c)
+      pos_diag.add(r + c)
+      neg_diag.add(r - c)
+      board[r][c] = "Q"
+
+      backtrack(r + 1)
+
+      col.remove(c)
+      pos_diag.remove(r + c)
+      neg_diag.remove(r - c)
+      board[r][c] = "."
+
+  backtrack(0)
+  return res
+
+
+# Example usage:
+print("Total 4-Queens Solutions:", len(solve_n_queens(4)))
