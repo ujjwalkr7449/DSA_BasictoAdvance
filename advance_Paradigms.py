@@ -225,3 +225,19 @@ print(length_of_longest_substring("abcabcbb"))  # Output: 3 ("abc")
 
 """. Bit Manipulation (Power of Two & Single Number)
 Question: Check if a number is a power of two and find the single non-duplicate number using XOR tricks."""
+# Power of two check
+def is_power_of_two(n):
+  return n > 0 and (n & (n - 1)) == 0
+
+
+# Find single number (every other element appears twice)
+def single_number(nums):
+  result = 0
+  for num in nums:
+    result ^= num
+  return result
+
+
+# Example usage:
+print("Is 16 a power of two?", is_power_of_two(16))  # Output: True
+print("Single number in [4, 1, 2, 1, 2]:", single_number([4, 1, 2, 1, 2]))  # Output: 4
