@@ -112,3 +112,7 @@ k = 3
 print(
     f"Max sum of subarray of size {k}:", max_subarray_sum(nums, k)
 )  # Output: 9 (5 + 1 + 3)
+
+"""1. Advanced Dynamic Programming (Bitmask DP)
+Question: Solve the Travelling Salesperson Problem (TSP) using Bitmask DP to 
+find the minimum cost to visit all cities and return to the start."""
