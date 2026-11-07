@@ -222,3 +222,6 @@ def length_of_longest_substring(s):
 
 # Example usage:
 print(length_of_longest_substring("abcabcbb"))  # Output: 3 ("abc")
+
+""". Bit Manipulation (Power of Two & Single Number)
+Question: Check if a number is a power of two and find the single non-duplicate number using XOR tricks."""
