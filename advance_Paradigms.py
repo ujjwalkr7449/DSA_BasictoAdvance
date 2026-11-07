@@ -139,3 +139,27 @@ cost_matrix = [[0, 10, 15, 20], [10, 0, 35, 25], [15, 35, 0, 30], [20, 25, 30, 0
 n = len(cost_matrix)
 memo = {}
 print("Minimum TSP Cost:", tsp(1, 0, n, cost_matrix, memo))
+
+"""2. . Greedy Algorithms (Activity Selection)
+Question: Given start and end times of activities, select the maximum number of activities 
+that can be performed by a single person."""
+def activity_selection(start, end):
+  n = len(start)
+  activities = sorted(
+      range(n), key=lambda i: end[i]
+  )  # Sort by finish time
+  selected = []
+
+  last_end_time = -1
+  for i in activities:
+    if start[i] >= last_end_time:
+      selected.append(i)
+      last_end_time = end[i]
+
+  return selected
+
+
+# Example usage:
+start_times = [1, 3, 0, 5, 8, 5]
+end_times = [2, 4, 6, 7, 9, 9]
+print("Selected Activity Indices:", activity_selection(start_times, end_times))
