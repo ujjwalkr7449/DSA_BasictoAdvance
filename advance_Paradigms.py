@@ -223,7 +223,7 @@ def length_of_longest_substring(s):
 # Example usage:
 print(length_of_longest_substring("abcabcbb"))  # Output: 3 ("abc")
 
-""". Bit Manipulation (Power of Two & Single Number)
+"""5. Bit Manipulation (Power of Two & Single Number)
 Question: Check if a number is a power of two and find the single non-duplicate number using XOR tricks."""
 # Power of two check
 def is_power_of_two(n):
@@ -241,3 +241,48 @@ def single_number(nums):
 # Example usage:
 print("Is 16 a power of two?", is_power_of_two(16))  # Output: True
 print("Single number in [4, 1, 2, 1, 2]:", single_number([4, 1, 2, 1, 2]))  # Output: 4
+"""6. String Algorithms (KMP Pattern Matching)
+Question: Implement the Knuth-Morris-Pratt (KMP) algorithm to find all occurrences of a pattern in a text.
+"""
+def compute_lps(pattern):
+  lps = [0] * len(pattern)
+  length = 0
+  i = 1
+  while i < len(pattern):
+    if pattern[i] == pattern[length]:
+      length += 1
+      lps[i] = length
+      i += 1
+    else:
+      if length != 0:
+        length = lps[length - 1]
+      else:
+        lps[i] = 0
+        i += 1
+  return lps
+
+
+def kmp_search(text, pattern):
+  if not pattern:
+    return []
+  lps = compute_lps(pattern)
+  matches = []
+  i = j = 0
+
+  while i < len(text):
+    if text[i] == pattern[j]:
+      i += 1
+      j += 1
+    if j == len(pattern):
+      matches.append(i - j)
+      j = lps[j - 1]
+    elif i < len(text) and text[i] != pattern[j]:
+      if j != 0:
+        j = lps[j - 1]
+      else:
+        i += 1
+  return matches
+
+
+# Example usage:
+print("Pattern found at indices:", kmp_search("ababcabcabababd", "ababd"))
