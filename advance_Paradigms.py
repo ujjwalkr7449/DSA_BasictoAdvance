@@ -164,7 +164,8 @@ start_times = [1, 3, 0, 5, 8, 5]
 end_times = [2, 4, 6, 7, 9, 9]
 print("Selected Activity Indices:", activity_selection(start_times, end_times))
 
-"""3. Backtracking (N-Queens Problem)Question: Place $N$ queens on an $N 
+"""3. Backtracking (N-Queens Problem)
+Question: Place $N$ queens on an $N 
 times N$ chessboard such that no two queens threaten each other."""
 def solve_n_queens(n):
   col = set()
@@ -200,3 +201,7 @@ def solve_n_queens(n):
 
 # Example usage:
 print("Total 4-Queens Solutions:", len(solve_n_queens(4)))
+
+"""4. Two Pointers & Sliding Window (Longest Substring Without Repeating Characters)
+Question: Find the length of the longest substring without repeating characters using a variable-size sliding window.
+"""
