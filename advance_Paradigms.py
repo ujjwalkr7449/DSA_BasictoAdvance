@@ -116,3 +116,26 @@ print(
 """1. Advanced Dynamic Programming (Bitmask DP)
 Question: Solve the Travelling Salesperson Problem (TSP) using Bitmask DP to 
 find the minimum cost to visit all cities and return to the start."""
+def tsp(mask, pos, n, cost, memo):
+  if mask == (1 << n) - 1:
+    return cost[pos][0]  # return to starting city (0)
+
+  if (mask, pos) in memo:
+    return memo[(mask, pos)]
+
+  ans = float("inf")
+  for nxt in range(n):
+    if not (mask & (1 << nxt)):
+      ans = min(
+          ans, cost[pos][nxt] + tsp(mask | (1 << nxt), nxt, n, cost, memo)
+      )
+
+  memo[(mask, pos)] = ans
+  return ans
+
+
+# Example usage:
+cost_matrix = [[0, 10, 15, 20], [10, 0, 35, 25], [15, 35, 0, 30], [20, 25, 30, 0]]
+n = len(cost_matrix)
+memo = {}
+print("Minimum TSP Cost:", tsp(1, 0, n, cost_matrix, memo))
